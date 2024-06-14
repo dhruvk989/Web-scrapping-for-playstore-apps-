@@ -1,24 +1,33 @@
-# Web-scrapping-for-playstore-apps-
-Web scrapping for playstore apps 
-🔹 Automated Login & Navigation: Using Selenium, I automated the login process to the reviewapp.mobi platform and navigated to each app's review page.
-🔹 Data Extraction: Parsed review data, including user ratings and review content, using BeautifulSoup.
-🔹 Data Transformation & Storage: Stored the extracted data into individual Excel files for easy analysis and reporting.
+Automated App Review Extraction from Google Play Store
+This project automates the extraction of app reviews from the Google Play Store using Selenium, BeautifulSoup, and pandas. It efficiently handles dynamic content loading, pagination, and error handling to scrape reviews and save them into structured Excel files for easy analysis.
 
-Key Highlights:
-Dynamic Web Scraping: Handled dynamic content loading and pagination efficiently with Selenium's WebDriverWait and JavaScript execution.
-Data Parsing: Extracted ratings accurately by counting star icons and cleaned review content for better readability.
-Batch Processing: Processed multiple apps' reviews in a single run, saving hours of manual work.
-Error Handling: Implemented robust error handling to manage stale element references and page load issues.
-Technologies Used:
-Selenium: For automating web interactions and navigating through pages.
-BeautifulSoup: For parsing HTML content and extracting meaningful data.
-pandas: For transforming data into structured formats and exporting to Excel.
-ChromeDriver: For controlling the Chrome browser.
-Next Steps:
-Scaling Up: Plan to scale this solution to handle more apps and different review platforms.
-Data Analysis: Using the extracted data for sentiment analysis and user feedback trends.
-📂 Sample Data & Code: Attached are some sample extracted Excel files and a certificate of completion.
+Features
+Automated Login & Navigation: Logs into the reviewapp.mobi platform and navigates to each app's review page.
+Data Extraction: Parses review data, including user ratings and review content.
+Data Transformation & Storage: Stores the extracted data into individual Excel files.
+Dynamic Web Scraping: Handles dynamic content loading and pagination.
+Batch Processing: Processes multiple apps' reviews in a single run.
+Error Handling: Manages stale element references and page load issues.
+Prerequisites
+Python 3.x
+Google Chrome
+ChromeDriver (compatible with your Chrome version)
+Selenium
+BeautifulSoup
+pandas
+Installation
+Usage
+Open get_data_and_parse.py and replace the placeholder email and password in the login function with your credentials for reviewapp.mobi.
 
-📈 Output Insights: This automation helps in quickly gathering user feedback, which is crucial for app developers to understand user satisfaction and areas of improvement.
+Optionally, update the data_to_parse list with your desired apps and their corresponding Google Play Store URLs and dates.
 
-Feel free to reach out if you have any questions or need insights into how this can be applied to your projects. Happy to share more details and collaborate! 😊
+Run the script:
+The script will:
+
+Log into reviewapp.mobi.
+Navigate to each app's review page.
+Extract and save review data into HTML files.
+Convert the HTML files to Excel files with structured data, including ratings.
+Note
+Manual Intervention: The script will handle pagination automatically. However, if a button is not detected, you may need to manually click the "Next" button and rerun the script.
+Date Configuration: You can edit the date in the data_to_parse list to customize the date range for the reviews you want to extract.
